@@ -1,0 +1,156 @@
+.btn-primary {
+	@extend %fontPrimaryBold;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: -1.05px;
+	border: none;
+	border-radius: 3px;
+	outline: none !important;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+
+	&.with-icon {
+		padding-right: 50px;
+	}
+
+	&:active, &:focus {
+		outline: none;
+	}
+
+	i {
+		font-size: 24px;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&.small {
+		font-size: 16px;
+		letter-spacing: -0.55px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&.medium {
+	    font-size: 16px;
+	    letter-spacing: 0.25px;
+	    padding-top: 9px;
+	    padding-bottom: 9px;
+	    padding-left: 16px;
+	    padding-right: 16px;
+	}
+
+	&.green {
+		&:not(.outline) {
+			background-color: $colorGreen1;
+			border: 3px solid $colorGreen1;
+
+			&:hover {
+				background-color: lighten($colorGreen1, 5%);
+			}
+		}
+	}
+
+	&.outline {
+		background-color: transparent;
+		border: 3px solid $colorGrey1;
+		color: $colorGrey1;
+		overflow: hidden;
+		transition: color 0.6s;
+		transition-delay: 0.2s;
+
+		.text {
+			z-index: 1;
+			position: relative;
+		}
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			background-color: $colorGrey1;
+			// z-index: -1;
+			transform: skewX(140deg);
+			transition: all 0.6s cubic-bezier(.24,.22,.015,1.56), opacity 0.4s ease-in-out;
+			opacity: 0;
+		}
+
+		&:before {
+			left: -120%;
+		}
+
+		&:after {
+			right: -120%;
+		}
+
+		&:hover {
+
+			&:before, &:after {
+				opacity: 1;
+			}
+
+			&:before {
+				left: -49%;
+			}
+			&:after {
+				right: -49%;
+			}
+
+			color: $colorPureWhite;
+		}
+
+		&.green {
+			border: 3px solid $colorGreen1;
+			color: $colorGreen1;
+
+			&:before, &:after {
+				background-color: $colorGreen1;
+			}
+
+			&:hover {
+				color: $colorPureWhite;
+				background-color: transparent;
+				box-shadow: none;
+			}
+
+			&:active {
+				background-color: transparent;
+				box-shadow: none;
+
+				&:before, &:after {
+					background-color: lighten($colorGreen1, 5%);
+				}
+			}
+		}
+
+		&.white {
+			border: 3px solid $colorPureWhite;
+			color: $colorPureWhite;
+
+			&:before, &:after {
+				background-color: $colorPureWhite;
+			}
+
+			&:hover {
+				color: $colorGreen1;
+				box-shadow: none;
+			}
+
+			&:active {
+				background-color: darken($colorPureWhite, 5%);
+				color: $colorGreen1;
+				box-shadow: none;
+			}
+		}
+	}
+
+
+}

@@ -1,0 +1,92 @@
+.export-window {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba($colorPureWhite, 0.95);
+	z-index: 2010;
+
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.export-window__inner {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.export-window__confirmation {
+	display: inline-block;
+	transition: all 0.4s;
+
+	h3 {
+		@extend %fontPrimaryBold;
+		font-size: 30px;
+		color: $colorGrey2;
+		margin-bottom: 25px;
+	}
+
+	.buttons {}
+}
+
+
+.export-window__progress {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.export-window__progress-bar {
+	width: 100%;
+	height: 15px;
+	margin-top: 10px;
+	border-radius: 15px;
+	border: 2px solid $colorGreen1;
+	overflow: hidden;
+	max-width: 250px;
+    margin: 0 auto;
+    margin-top: 70px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+	.inner {
+		width: 0%;
+		height: 100%;
+		transition: all 1s;
+		background-color: $colorGreen1;
+		border-radius: 15px;
+	}
+
+	&.progress-bar-visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+.export-window.exporting {
+
+	.export-window__confirmation {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.export-window__progress {
+		opacity: 1;
+		visibility: visible;
+	}
+
+}

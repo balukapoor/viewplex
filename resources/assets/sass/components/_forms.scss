@@ -1,0 +1,237 @@
+.main-form {
+
+
+	.input-wrap {
+		position: relative;
+
+
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"],
+		input[type="number"],
+		input[type="password"],
+		input[type="file"],
+		select {
+			@extend %fontPrimaryMedium;
+	    	appearance: none;
+	    	outline: none;
+	    	font-size: 14px;
+	    	letter-spacing: -0.74px;
+	    	color: $colorGrey2;
+	        border: 2px solid $colorGreen1;
+	        background-color: #FBFBFB;
+	        width: 100%;
+	        padding-left: 15px;
+	        padding-right: 15px;
+	        padding-top: 11px;
+	        padding-bottom: 13px;
+	        border-radius: 0px;
+
+	        &::placeholder {
+	        	color: $silver;
+	        }
+		}
+
+		select {
+        	cursor: pointer;
+        }
+
+		i {
+			font-size: 14px;
+        	position: absolute;
+        	top: 50%;
+        	transform: translateY(-50%);
+        	left: 15px;
+		}
+
+
+		&.with-icon {
+			input[type="text"],
+			input[type="tel"],
+			input[type="email"],
+			input[type="number"],
+			input[type="password"],
+			select {
+				padding-left: 40px;
+			}
+        }
+
+
+		&.select {
+			i {
+				left: initial;
+				right: 15px;
+			}
+
+			&.with-icon {
+				i {
+					&:first-child {
+						left: 15px;
+						right: initial;
+					}
+
+					&:last-child {
+						left: initial;
+						right: 15px;
+					}
+				}
+			}
+		}
+
+	}
+
+	.submit {
+		@extend %fontPrimaryBold;
+		font-size: 20px;
+		color: $colorPureWhite;
+		letter-spacing: -1.05px;
+		padding-left: 20px;
+	    padding-right: 20px;
+	    padding-top: 10px;
+	    padding-bottom: 11px;
+	    background-color: $colorGreen1;
+	    border-radius: 3px;
+	    appearance: none;
+	    outline: none;
+	    border: none;
+	    transition: all 0.3s;
+
+	    &:hover {
+	    	background-color: lighten($colorGreen1, 5%);
+	    }
+	}
+
+	label {
+		@extend %fontPrimaryMedium;
+		font-size: 14px;
+		color: $colorGrey1;
+		letter-spacing: -0.74px;
+		margin-bottom: 5px;
+	}
+
+}
+
+.dial-code-dropdown {
+	position: relative;
+
+
+	[data-dial-code-flag] {
+
+	}
+
+	input {
+		padding-left: 100px !important;
+	}
+
+}
+
+.dial-code-dropdown__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	left: 15px;
+	cursor: pointer;
+
+
+	img {}
+
+	span {
+		margin-left: 5px;
+	}
+
+	i {
+		position: relative !important;
+    	transform: none !important;
+    	top: 0 !important;
+    	left: 0 !important;
+    	margin-left: 5px !important;
+	}
+
+}
+
+.dial-code-dropdown__menu {
+	position: absolute;
+	z-index: 2001;
+    top: 46px;
+	border: 2px solid $colorGreen1;
+	background-color: $colorPureWhite;
+	border-top: none;
+	max-height: 300px;
+    overflow-y: auto;
+    visibility: hidden;
+
+	ul {
+		padding: 0px;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		cursor: pointer;
+
+		&.selected {
+			background-color: darken($colorPureWhite, 10%);
+		}
+
+		&:first-child {
+			padding-top: 15px;
+		}
+
+		&:last-child {
+			padding-bottom: 15px;
+		}
+
+		img {
+			max-width: 30px;
+			margin-right: 10px;
+		}
+
+		&:hover {
+			background-color: darken($colorPureWhite, 10%);
+		}
+	}
+}
+
+.dial-code-underlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	z-index: 2000;
+}
+
+body.dial-code-menu-open {
+
+	.dial-code-underlay {
+		display: block;
+	}
+
+	.dial-code-dropdown__menu {
+		visibility: visible;
+	}
+
+}
+
+
+input::-webkit-autofill,
+input::-webkit-autofill:hover,
+input::-webkit-autofill:focus,
+input::-webkit-autofill,
+textarea::-webkit-autofill,
+textarea::-webkit-autofill:hover,
+textarea::-webkit-autofill:focus,
+select::-webkit-autofill,
+select::-webkit-autofill:hover,
+select::-webkit-autofill:focus {
+	background-color: #FBFBFB !important;
+}

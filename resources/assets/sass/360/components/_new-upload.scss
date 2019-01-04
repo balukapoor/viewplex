@@ -1,0 +1,56 @@
+.upload-tool {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	z-index: 1003;
+	visibility: hidden;
+}
+
+.upload-tool__overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(#000, 0.4);
+
+	opacity: 0;
+	transition: all 0.6s;
+}
+
+.upload-tool__box {
+	position: relative;
+	margin: auto;
+	max-width: 300px;
+	background-color: rgba($colorPureWhite, 0.95);
+	padding: 15px 15px;
+    border-radius: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	label {
+		@extend %fontPrimaryRegular;
+	}
+
+	input {
+		width: 100%;
+	}
+}
+
+.upload-tool__buttons {
+	text-align: right;
+    margin-top: 30px;
+
+    button[data-upload-tool-cancel] {
+    	background-color: transparent !important;
+    	border: none !important;
+    	color: $colorGrey1 !important;
+    	font-size: 13px;
+    	letter-spacing: -0.3px;
+    	padding: 0px;
+    	margin-right: 6px;
+    }
+}

@@ -1,0 +1,77 @@
+.page--register {
+
+    .app-main {
+        min-height: calc(950px - 117px);
+    }
+
+	/**
+     * Main Form
+     */
+
+    .section-form {
+        background-image: url(/../images/login-bg.jpg);
+    }
+
+
+    .section-form__form {
+        h2 {
+            @extend %fontPrimaryBold;
+            font-size: 18px;
+            color: $silver;
+            letter-spacing: -0.95px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+    }
+
+    .section-form__input-group {
+
+        &:nth-child(odd) {
+            margin-right: 20px;
+        }
+
+        margin-bottom: 20px;
+        flex-basis: calc(50% - 10px);
+
+        &:last-child {
+            flex-basis: 100%;
+
+            .submit {
+                margin-right: 15px;
+            }
+
+            label {
+                @extend %fontPrimaryMedium;
+                font-size: 14px;
+                color: $silver;
+                letter-spacing: -0.74px;
+            }
+        }
+
+    }
+
+
+    @media screen and (max-width: $smallTablet) {
+        .app-main {
+            min-height: calc(140vh - 117px) !important;
+        }
+
+        .section-form__input-group:last-child {
+            display: block;
+
+            .submit {
+                margin-bottom: 20px;
+                margin-right: 0px;
+                width: 100%;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: $smallPhone) {
+        .app-main {
+        min-height: calc(144vh - 117px) !important;
+        }
+    }
+}

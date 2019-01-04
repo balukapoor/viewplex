@@ -1,0 +1,104 @@
+.uploads-sidebar {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 285px;
+	z-index: 1002;
+
+	transition: transform 1.2s, opacity 0.5s, visibility 0.5s;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-100%);
+}
+
+.uploads-sidebar__gradient {
+	width: 400px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background-image: linear-gradient(90deg, rgba(0,0,0,0.37) 0%, rgba(216,216,216,0.00) 79%);
+}
+
+.uploads-sidebar__overflow {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.uploads-sidebar__scroll {
+	width: 305px;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+}
+
+.uploads-sidebar__inner {
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 40px;
+	width: 100%;
+
+	ul {
+		padding: 0px;
+		margin: 0px;
+		list-style-type: none;
+	}
+}
+
+.uploads-sidebar__upload {
+	width: 90%;
+	height: 125px;
+	border-radius: 2px;
+	box-shadow: -9px 6px 15px 0px rgba(0, 0, 0, 0.13);
+	cursor: pointer;
+	margin-bottom: 15px;
+	transform: translateX(-150%);
+	opacity: 0;
+	transition: box-shadow 0.6s, transform 0.4s, border 0.2s, opacity 0.4s;
+
+	&.thumb-visible {
+		transform: translateX(0%);
+		opacity: 0.4;
+	}
+
+	&.active {
+		box-shadow: -9px 6px 15px 0px rgba(0, 0, 0, 0.35);
+		opacity: 1;
+	}
+
+	&:hover {
+		box-shadow: -9px 6px 15px 0px rgba(0, 0, 0, 0.35);
+		transform: scale(1.02) translateX(0);
+		opacity: 1;
+	}
+
+	&:active {
+		box-shadow: -9px 6px 15px 0px rgba(0, 0, 0, 0.35);
+		transform: scale(0.98) translateX(0);
+	}
+}
+
+.uploads-sidebar__upload-thumb {
+	width: 100%;
+	height: 100%;
+	// background-image: url(./../images/upload-thumbnail.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.uploads-sidebar__upload-name {
+	@extend %fontPrimaryRegular;
+	position: absolute;
+    bottom: 10px;
+    font-size: 13px;
+    background-color: rgba($colorPureWhite, 0.85);
+    right: 10px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    cursor: context-menu;
+}

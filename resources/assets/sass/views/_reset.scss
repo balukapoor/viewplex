@@ -1,0 +1,64 @@
+.page--reset{
+
+	.app-main {
+        background-image: url(/../images/reset.jpg);
+    }
+
+	/**
+     * Main Form
+     */
+
+    .app-main {
+        min-height: calc(750px - 117px);
+    }
+
+	/**
+     * Main Form
+     */
+
+    .section-form {
+        background-image: url(/../images/reset.jpg);
+    }
+
+    .section-form__inner{
+        max-width: 530px;
+    }
+
+
+    .section-form__input-group {
+
+    	&:not(.button) {
+        	flex: 1;
+        	margin-right: 15px;
+    	}
+
+    	&.remember {
+    		flex-basis: 100%;
+    	}
+    }
+
+
+    .section-form__input-wrap {}
+
+    .section-form__user-input {}
+
+	.section-form__links h6 {
+		@extend %fontPrimaryRegular;
+		font-family: MavenPro-Medium;
+		font-size: 14px;
+		color: $colorPureWhite;
+		letter-spacing: -0.74px;
+		margin-top: 15px;
+	}
+
+    .section-form__links a {
+        color: $colorPureWhite;
+        text-decoration: underline;
+    }
+
+    .section-form__links {
+        text-align: right;
+    }
+
+
+}

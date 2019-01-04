@@ -1,0 +1,96 @@
+.layout--alert {
+
+    .app-main__bg-image {
+     background-size: cover;
+     background-position: center;
+    }
+
+    .app-header {
+        position: relative;
+    }
+
+    .app-footer {
+        position: relative;
+        background-color: $colorPureWhite;
+    }
+
+    .app-main__bg-image,
+    .app-main__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #191970;
+        opacity: 0.45;   
+    }
+
+
+    .app-main {
+        height: calc(100vh - 117px);
+        background-image: url(/../images/reactive.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .app-main__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #191970;
+        opacity: 0.45;
+    }
+
+    /**
+     * Header
+     */
+
+    .app-header {
+         width: 100%;
+         z-index: 1003;
+         position: absolute;
+         background-color: transparent;
+    }
+
+
+    /**
+     * Section message
+     */
+
+    .section-message {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .section-message__cta {}
+
+    .section-message__heading {
+        @extend %fontPrimaryBold;
+        font-size: 48px;
+        color: $colorPureWhite;
+        letter-spacing: -2.53px;
+        margin-bottom: 30px;
+    }
+
+    .section-message__copy {
+        @extend %fontPrimaryRegular;
+        font-size: 16px;
+        color: $colorPureWhite;
+        max-width: 710px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: $smallTablet) {
+        .section-message__heading {
+            font-size: 32px;
+        }
+    }
+
+
+}

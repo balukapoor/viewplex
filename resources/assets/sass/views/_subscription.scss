@@ -1,0 +1,183 @@
+.page--subscription {
+
+	.section-nav {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		ul {
+			text-align: center;
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+
+			li {
+				display: inline-block;
+
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
+
+				a {
+					@extend %fontPrimaryBold;
+					font-size: 18px;
+					color: $silver;
+					letter-spacing: -0.95px;
+					text-decoration: none;
+					text-transform: uppercase;
+					position: relative;
+
+					&:before {
+						content: '';
+						position: absolute;
+						width: 100%;
+						height: 4px;
+						background-color: $silver;
+						transition: all .45s cubic-bezier(.24,.22,.015, 1.76), opacity .2s ease-in-out;
+
+						opacity: 0;
+						top: 70%;
+					}
+
+					&:hover {
+
+						&:before {
+							opacity: 1;
+							top: 110%;
+						}
+					}
+				}
+
+				&.active {
+					a {
+						color: $colorGreen1;
+
+						&:before {
+							background-color: $colorGreen1;
+							opacity: 1;
+							top: 110%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.section-heading {}
+
+	.section-heading__inner {
+		background-color: $colorPureWhite;
+		border-radius: 4px;
+		padding-top: 40px;
+		padding-bottom: 50px;
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	.section-heading__text {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.section-heading__plan-icon {
+		margin-right: 30px;
+
+		i {
+			font-size: 100px;
+		}
+	}
+
+	.section-heading__plan-name {
+		@extend %fontPrimaryBold;
+		font-size: 32px;
+		line-height: 36px;
+		margin: 0px;
+		color: $colorGrey2;
+	}
+
+	.section-heading__copy {
+		@extend %fontPrimaryRegular;
+		color: $colorGrey2;
+		margin-bottom: 20px;
+	}
+
+	.section-heading__buttons {
+
+		.cancel {
+			display: block;
+			margin-top: 20px;
+    		color: $silver;
+    		text-decoration: underline;
+		}
+
+	}
+
+	.section-heading {
+		&.Bronze {
+			.section-heading__plan-icon {
+				i {
+					color: #DC9564;
+				}
+			}
+		}
+
+		&.Silver {
+			.section-heading__plan-icon {
+				i {
+					color: #CFD0D2;
+				}
+			}
+		}
+
+		&.Gold {
+			.section-heading__plan-icon {
+				i {
+					color: #FFD71E;
+				}
+			}
+		}
+
+		&.Platinum {
+			.section-heading__plan-icon {
+				i {
+					color: #DDE7EE;
+				}
+			}
+		}
+
+	}
+
+
+	@media screen and (max-width: $smallTablet) {
+		.section-heading__inner {
+			padding-top: 30px;
+   			padding-bottom: 40px;
+    		padding-left: 20px;
+    		padding-right: 20px;
+		}
+
+		.section-heading__text {
+			display: flex;
+    		flex-direction: column;
+		}
+
+		.section-heading__plan-name {
+			font-size: 22px;
+		}
+		.section-heading__plan-icon {
+			font-size: 75px;
+			margin-right: 0;
+		}
+
+		.btn-primary {
+			margin-top: 10px;
+		}
+
+		.section-heading__buttons {
+			display: flex;
+    		flex-direction: column;
+		}
+
+	}
+
+}

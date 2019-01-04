@@ -1,0 +1,9 @@
+body.layout--360 {
+	overflow: hidden;
+}
+
+.app-main {
+	height: 100vh;
+	background-color: $colorOffWhite2;
+	transition: background-color 2s;
+}

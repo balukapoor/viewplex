@@ -1,0 +1,16 @@
+.room-connector-tool--active canvas {
+	cursor: copy;
+}
+
+.room-connector-tool--connecting {
+
+	.room-connector {
+		visibility: visible;
+	}
+
+	.room-connector__overlay {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+}

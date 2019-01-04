@@ -1,0 +1,58 @@
+.flash-message-box {
+	position: fixed;
+	top: 100px;
+	visibility: hidden;
+	right: 0;
+	z-index: 1005;
+	pointer-events: none;
+
+	&.visible {
+		visibility: visible;
+	}
+}
+
+.flash-message {
+	position: relative;
+	margin-bottom: 10px;
+	background-color: $colorInfo;
+	color: $colorPureWhite;
+	padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+    box-shadow: -10px 10px 30px -20px rgba(0, 0, 0, 0.4);
+
+    transition: all .75s cubic-bezier(.24,.22,.015, 1.06), opacity .4s ease-in-out;
+    opacity: 0;
+    right: -100%;
+
+	i {
+		margin-right: 10px;
+	}
+
+	span {
+		@extend %fontPrimaryMedium;
+	}
+
+
+	&.error {
+		background-color: $colorDanger;
+	}
+
+	&.warning {
+		background-color: $colorWarning;
+	}
+
+	&.success {
+		background-color: $colorSuccess;
+	}
+
+
+	&.visible {
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+
+}
+

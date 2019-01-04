@@ -1,0 +1,287 @@
+.page--settings {
+
+	.section-nav {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		ul {
+			text-align: center;
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+
+			li {
+				display: inline-block;
+
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
+
+				a {
+					@extend %fontPrimaryBold;
+					font-size: 18px;
+					color: $silver;
+					letter-spacing: -0.95px;
+					text-decoration: none;
+					text-transform: uppercase;
+					position: relative;
+
+					&:before {
+						content: '';
+						position: absolute;
+						width: 100%;
+						height: 4px;
+						background-color: $silver;
+						transition: all .45s cubic-bezier(.24,.22,.015, 1.76), opacity .2s ease-in-out;
+
+						opacity: 0;
+						top: 70%;
+					}
+
+					&:hover {
+
+						&:before {
+							opacity: 1;
+							top: 110%;
+						}
+					}
+				}
+
+				&.active {
+					a {
+						color: $colorGreen1;
+
+						&:before {
+							background-color: $colorGreen1;
+							opacity: 1;
+							top: 110%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.section-settings {
+		display: flex;
+		justify-content: center;
+	}
+
+	.section-settings__inner {
+		background-color: $colorPureWhite;
+		border-radius: 4px;
+		padding-top: 40px;
+		padding-bottom: 50px;
+		padding-left: 60px;
+		padding-right: 60px;
+		display: flex;
+		align-items: center;
+	}
+
+	.section-settings__photo {
+		width: 170px;
+		height: 170px;
+		border-radius: 50%;
+		background-color: $colorOffWhite2;
+		margin-right: 40px;
+		background-image: url(/../images/user-placeholder.png);
+		background-size: cover;
+	    background-position: center;
+	    position: relative;
+	    overflow: hidden;
+
+		.upload-button {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		    text-align: center;
+		    cursor: pointer;
+		    opacity: 0;
+		    background-color: rgba(#000, 0.3);
+
+		    transition: all 0.3s;
+
+		    i {
+		    	font-size: 50px;
+		    	top: 50%;
+		    	position: relative;
+		    	transform: translateY(-50%);
+		    	color: #fff;
+		    }
+		}
+
+		&:hover {
+			.upload-button {
+				opacity: 1;
+			}
+		}
+
+	}
+
+	.section-settings__options {
+		flex: 1;
+
+		ul {
+			padding: 0px;
+			margin: 0px;
+			list-style-type: none;
+
+			li {
+				display: flex;
+				align-items: center;
+
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+
+				i {
+					font-size: 20px;
+					color: $silver;
+					margin-right: 10px;
+				}
+
+				span {
+					@extend %fontPrimaryMedium;
+					font-size: 20px;
+					color: $silver;
+					letter-spacing: -1.05px;
+					flex: 1;
+					margin-right: 40px;
+				}
+
+				a {
+					@extend %fontPrimaryMedium;
+					font-size: 15px;
+					color: $colorGreen1;
+					letter-spacing: -0.79px;
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+
+	}
+
+
+	.form-modal {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1003;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s;
+	}
+
+	.form-modal__underlay {
+		background-color: rgba(#000, 0.2);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.form-modal__inner {
+		max-width: 400px;
+		padding: 20px;
+		background-color: $colorPureWhite;
+		position: relative;
+		margin: 0 auto;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+
+	.form-modal__input-area {
+		input {
+			@extend %fontPrimaryMedium;
+			font-size: 14px;
+			letter-spacing: -0.74px;
+			appearance: none;
+			border: 2px solid $colorGreen1;
+	        font-size: 14px;
+	        padding-left: 15px;
+	        padding-right: 15px;
+	        padding-top: 15px;
+	        padding-bottom: 18px;
+	        display: block;
+	        margin-bottom: 20px;
+	        outline: none;
+	        width: 100%;
+	        background-color: #FBFBFB;
+
+	        &::placeholder {
+	        	color: $silver;
+	        }
+		}
+
+		label {
+			@extend %fontPrimaryMedium;
+			font-size: 14px;
+			color: $colorGreen1;
+			letter-spacing: -0.74px;
+		}
+	}
+
+	@media screen and (max-width: $mediumTablet) {
+
+		.section-settings__inner {
+			flex-direction: column;
+		}
+
+		.section-settings__photo {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 30px;
+		}
+
+		.upload-box__inner {
+			display: flex;
+		    flex-direction: column;
+		}
+
+		.green {
+		    margin-top: 20px;
+		}
+
+		.section-settings__options {
+			ul {
+				li {
+					span {
+						font-size: 14px;
+						}
+					}
+				}
+
+			}
+	}
+
+	@media screen and (min-width: $largePhone) {
+		.green {
+		    margin-top: 0;
+		}
+	}
+
+	@media screen and (max-width: $mediumPhone) {
+		.section-nav ul {
+			line-height: 2.5;
+		}
+	}
+
+
+}
+
+body.settings-modal-open {
+
+	.form-modal {
+		opacity: 1;
+		visibility: visible;
+		z-index: 10002;
+	}
+
+}

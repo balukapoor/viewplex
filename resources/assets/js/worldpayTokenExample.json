@@ -1,0 +1,26 @@
+/*Example token for WordlPay*/
+{
+    "token": "UUID of token",
+    "reusable": true/false,
+    "paymentMethod": {
+        "type" : "ObfuscatedCard",     
+        "name": "name",
+        "expiryMonth": 2,
+        "expiryYear": 2015,
+        "issueNumber": 1,
+        "startMonth": 2,
+        "startYear": 2013,
+        "type": "ObfuscatedCard",                                               
+        "cardType": "VISA_CREDIT",
+        "maskedCardNumber": "xxxx xxxx xxxx 1111",
+        "cardSchemeType": "consumer",
+        "cardSchemeName": "VISA CREDIT",
+        "cardProductTypeDescNonContactless": "Visa Credit Personal",
+        "cardProductTypeDescContactless": "CL Visa Credit Pers",
+        "cardIssuer": "LLOYDS BANK PLC",
+        "countryCode": "GB",
+        "cardClass": "credit",
+        "prepaid": "false"
+    },
+   "clientKey": "T_C_client_key"                
+}

@@ -1,0 +1,26 @@
+body.initial-ui-hidden {
+
+	.app-header {
+		transform: translateY(-100%);
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.app-footer {
+		transform: translateY(100%);
+		opacity: 0;
+		visibility: hidden;
+	}
+
+
+	.upload-box {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.app-main {
+		background-color: $colorGrey2;
+	}
+
+
+}

@@ -1,0 +1,48 @@
+.page--404 {
+
+	.app-main {
+        min-height: calc(750px - 117px);
+        background-image: url(https://images.unsplash.com/photo-1470758768875-67638195315b?dpr=2&auto=format&fit=crop&w=1500&h=923&q=80&cs=tinysrgb&crop=);
+    }
+
+    .section-message {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .section-message__heading {
+        @extend %fontPrimaryBold;
+        font-size: 48px;
+        color: $colorPureWhite;
+        letter-spacing: -2.53px;
+        margin-bottom: 10px;
+    }
+
+    .section-message__copy {
+    	@extend %fontPrimaryRegular;
+    	font-size: 16px;
+		color: $colorPureWhite;
+		max-width: 710px;
+    	line-height: 25px;
+    	margin-bottom: 30px;
+    }
+
+    .section-message__cta {}
+
+    @media screen and (max-width: $largePhablet) {
+
+        .section-message{
+
+            h1 {
+                font-size: 38px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+    }
+
+}

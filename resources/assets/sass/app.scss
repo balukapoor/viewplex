@@ -1,0 +1,53 @@
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Variables
+@import "variables";
+
+// Layouts
+@import "layouts/global";
+@import "layouts/layout-main";
+@import "layouts/layout-auth";
+@import "layouts/layout-alert";
+@import "layouts/layout-general";
+@import "layouts/layout-legal";
+
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/filter-menu";
+@import "components/search-bar";
+@import "components/buttons";
+@import "components/pagination";
+@import "components/flash-messages";
+@import "components/forms";
+@import "components/welcome-modal";
+
+// View/pages
+@import "views/tours";
+@import "views/settings";
+@import "views/subscription";
+@import "views/subscription-upgrade";
+@import "views/subscription-order";
+@import "views/login";
+@import "views/register";
+@import "views/upgrade";
+@import "views/404";
+@import "views/guide";
+@import "views/terms";
+@import "views/privacy";
+@import "views/dmca";
+@import "views/reactivate";
+@import "views/reset";
+@import "views/verify";
+@import "views/reset";
+@import "views/support";
+@import "views/browser-compability";
+@import "views/deactivate";
+@import "views/js-message";
+@import "views/subscription-cancel-confirmation";
+@import "views/subscription-order-confirmation";
+@import "views/billing";
+@import "views/change-payment-method";
+

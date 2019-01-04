@@ -1,0 +1,135 @@
+.layout--auth {
+
+    .app-main {
+        height: calc(100vh - 117px);
+    }
+
+    /**
+     * Header
+     */
+
+    .app-header {
+         width: 100%;
+         z-index: 2;
+         position: absolute;
+         background-color: transparent;
+    }
+
+
+    /**
+     * Main Form
+     */
+
+    .section-form {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .section-form__inner {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .section-form__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #191970;
+        opacity: 0.45;
+
+    }
+
+    .section-form__form {
+       background-color: $colorPureWhite;
+       padding: 25px 30px;
+       box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.25);
+       border-radius: 4px;
+    }
+
+    .section-form__title {
+        @extend %fontPrimaryBold;
+        font-size: 48px;
+        color: $colorPureWhite;
+        letter-spacing: -2.53px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .section-form__inputs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .section-form__input-group {}
+
+    @media screen and (max-width: $mediumTablet) {
+
+        .section-form__form {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .section-form__title{
+            margin-left: 20px;
+        }
+
+        .section-form__links h6 {
+            margin-right: 20px;
+        }
+    }
+
+    @media screen and (max-width: $largeTablet) {
+        .section-form__form {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .section-form__title{
+            margin-left: 20px;
+        }
+    }
+
+
+     @media screen and (max-width: $smallTablet) {
+
+        .section-form {
+            padding-top: 110px;
+        }
+
+        .section-form__inner {
+            margin-bottom: 50px;
+        }
+
+        .section-form__form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: space-evenly;
+        }
+
+        .section-form__inputs {
+            flex-direction: column;
+            align-items: normal;
+        }
+
+        .section-form__input-group {
+            margin-right: 0 !important;
+        }
+
+    }
+
+}

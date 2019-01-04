@@ -1,0 +1,28 @@
+.menu-underlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(#000, 0.1);
+	transition: all 0.6s;
+	z-index: 1001;
+	cursor: alias;
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+body.menu-open {
+	.menu-underlay {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+
+.app-main {
+	min-height: calc(100vh - 117px - 96px);
+}

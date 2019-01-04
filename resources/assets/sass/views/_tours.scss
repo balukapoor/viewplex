@@ -1,0 +1,388 @@
+.page--tours {
+
+
+	/**
+	 * Section Controls
+	 */
+
+	.section-controls {
+		margin-top: 40px;
+		margin-bottom: 45px;
+	}
+
+	.section-controls__flex {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.section-tours_results-message {
+		@extend %fontPrimaryMedium;
+		color: $colorGrey2;
+		font-size: 24px;
+    	letter-spacing: -0.42px;
+	}
+
+
+	/**
+	 * Section Tours
+	 */
+
+	.section-tours {
+		margin: 0 auto;
+    	width: 100%;
+    	text-align: center;
+	}
+
+	.section-tours__tour {
+		margin-bottom: 30px;
+	}
+
+	.section-tours__tour-inner {
+		background-color: $colorPureWhite;
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	.section-tours__tour-image {
+		width: 100%;
+		height: 260px;
+		display: block;
+		position: relative;
+
+		.image {
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(#000, 0.7);
+			transition: all 0.8s;
+			opacity: 0;
+		}
+
+		.view-button {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			text-align: center;
+
+			opacity: 0;
+			transition: all 0.8s;
+
+			i {
+				top: 50%;
+				transform: translateY(-50%);
+				position: relative;
+    			font-size: 100px;
+    			color: #fff;
+			}
+		}
+
+		&:hover {
+			.view-button, .overlay {
+				opacity: 1;
+			}
+		}
+
+	}
+
+
+	.section-tours__tour-live-icon {
+
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		overflow: hidden;
+		padding: 2px;
+		border: 1px solid red;
+
+		div {
+			width: 100%;
+			height: 100%;
+			background-color: red;
+			border-radius: 50%;
+		}
+
+	}
+
+	.section-tours__tour-footer {
+		display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+	}
+
+	.section-tours__tour-text {
+		padding: 25px 20px;
+	}
+
+	.section-tours__tour-address {
+		@extend %fontPrimaryRegular;
+		font-size: 18px;
+		color: $colorGrey2;
+		letter-spacing: -0.95px;
+		display: block;
+	}
+
+	.section-tours__tour-postcode {
+		@extend %fontPrimaryMedium;
+		color: $colorGrey2;
+		font-size: 31px;
+		letter-spacing: -1.63px;
+		display: block;
+	}
+
+	.section-tours__tour-menu-icon {
+		margin-right: 20px;
+		cursor: pointer;
+
+		.bars {
+			.bar {
+				width: 38px;
+				height: 5px;
+				border-radius: 2px;
+				background-color: $gooseEggBlue;
+				display: block;
+
+				&:not(:last-child) {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	.section-tours__tour-menu {
+		background-color: $colorPureWhite;
+		z-index: 1002;
+		position: absolute;
+	    right: 0;
+	    top: 350px;
+	    border-radius: 3px 0px 3px 3px;
+	    box-shadow: -5px 15px 65px -20px rgba(0, 0, 0, 0.4);
+	    min-width: 200px;
+	    transform: scale(.85) translateY(-10%);
+
+	    transition: all .25s cubic-bezier(.24,.22,.015,1.56), opacity .1s ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+
+
+		ul {
+			padding: 0px;
+			margin: 0px;
+			list-style-type: none;
+
+			li {
+				@extend %fontPrimaryBold;
+				font-size: 18px;
+				color: $colorGrey1;
+				position: relative;
+				letter-spacing: -0.05px;
+	    		font-weight: 500;
+	    		padding: 9px 15px;
+	    		border-bottom: 1px solid #e1e1e1;
+	    		display: flex;
+	    		align-items: center;
+
+				a {
+					color: $colorGrey1;
+					text-decoration: none;
+				}
+
+				i {
+					margin-right: 10px;
+					top: 1px;
+	    			position: relative;
+	    			font-size: 18px;
+	    			color: $colorGrey1;
+				}
+
+				&:first-child {
+					padding-top: 10px;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				&:hover {
+					background-color: #e1e1e1;
+				}
+
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -15px;
+    		right: 39px;
+    		height: 15px;
+    		width: 27px;
+			background-image: url(/../images/menu-triangle-up.png);
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.section-tours__tour-menu-icon {
+		&.menu-open {
+			.section-tours__tour-menu {
+				opacity: 1;
+				visibility: visible;
+				transform: scale(1) translate(0);
+			}
+		}
+	}
+
+	.section-tours__description {
+
+		h1 {
+			margin-bottom: 20px;
+			color: #b9b9b9;
+			@extend %fontPrimaryRegular;
+			text-transform: uppercase;
+   			font-weight: 500;
+		}
+	}
+
+@media screen and (max-width: $largePhablet) {
+	.section-controls__flex{
+		flex-flow: row;
+	}
+
+	.search-bar__icon i {
+		right: 6px;
+    	font-size: 18px;
+	}
+
+	.welcome-modal__links{
+
+		a{
+			text-align: center;
+		}
+
+	}
+
+}
+
+@media screen and (max-width: $smallTablet) {
+	.filter-menu__selection span {
+	    font-size: 15px;
+	}
+
+	.search-bar__input {
+		font-size: 11px;
+    	min-width: 106px;
+	}
+}
+
+
+
+
+
+	/**
+	 * Section Pagination
+	 */
+
+	.section-pagination {
+		margin-top: 40px;
+		margin-bottom: 100px;
+	}
+
+
+	/**
+	 * New button
+	 */
+
+	.new-button {
+		position: fixed;
+		bottom: 150px;
+		left: 0;
+		right: 0;
+
+		.container {
+			position: relative;
+		}
+	}
+
+	.new-button__button {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: $colorGreen1;
+		display: block;
+		position: absolute;
+		right: 0;
+		box-shadow: 0px 5px 50px -9px rgba(0, 0, 0, 0.4);
+		transition: all 0.4s;
+
+		i {
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			position: relative;
+			color: $colorPureWhite;
+			font-size: 27px;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+
+			i {
+				font-size: 30px;
+			}
+		}
+
+	}
+
+
+
+	/**
+	 * No results
+	 */
+
+	.section-no-results {
+		text-align: center;
+		position: absolute;
+    	top: 50%;
+    	transform: translateY(-50%);
+    	margin: auto;
+    	left: 0;
+    	right: 0;
+	}
+
+	.section-no-results__message {
+		@extend %fontPrimaryRegular;
+		margin-bottom: 20px;
+		color: $silver;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	.section-no-results__cta {
+		.with-icon {
+			i{
+				right: -36px;
+			}
+		}
+	}
+
+	 
+
+
+}

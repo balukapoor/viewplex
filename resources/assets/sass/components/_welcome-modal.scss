@@ -1,0 +1,86 @@
+body .welcome-modal {
+
+}
+
+.welcome-modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10003;
+	transition: all 0.3s;
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+.welcome-modal__underlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(#000, 0.5);
+}
+
+.welcome-modal__inner {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	background-color: $colorPureWhite;
+	max-width: 500px;
+	border-radius: 4px;
+	margin: 0 auto;
+	padding: 20px 30px;
+}
+
+
+
+body.welcome-modal-open {
+
+	.welcome-modal {
+		opacity: 1;
+		visibility: visible;
+	}
+
+}
+
+.welcome-modal__inner {
+ 	i {
+		font-size: 74px;
+	    position: absolute;
+	    top: -34px;
+	    left: 50%;
+		transform: translateX(-50%);
+	    background-color: #fff;
+	    border-radius: 50%;
+	    color: $silver;
+	}
+}
+
+.welcome-modal__title {
+	@extend %fontPrimaryRegular;
+	margin-top: 35px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.welcome-modal__subtitle {
+	font-size: 18px;
+	text-align: center;
+	color: $colorGreen1;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.welcome-modal__links {
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		text-transform: uppercase;
+		color: $silver;
+	}
+}

@@ -1,0 +1,12 @@
+.upload-tool--active {
+
+	.upload-tool {
+		visibility: visible;
+	}
+
+	.upload-tool__overlay {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+}

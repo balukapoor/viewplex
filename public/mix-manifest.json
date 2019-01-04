@@ -1,0 +1,12 @@
+{
+  "/js/app.js": "/js/app.js",
+  "/css/app.css": "/css/app.css",
+  "/css/360.css": "/css/360.css",
+  "/js/360Tool.js": "/js/360Tool.js",
+  "/js/components/welcome-modal.js": "/js/components/welcome-modal.js",
+  "/js/components/verify.js": "/js/components/verify.js",
+  "/js/components/settings-modal.js": "/js/components/settings-modal.js",
+  "/js/components/country-select.js": "/js/components/country-select.js",
+  "/js/360Viewer.js": "/js/360Viewer.js",
+  "/mix.js": "/mix.js"
+}

@@ -1,0 +1,107 @@
+.page--verify {
+
+
+	.app-main {
+		height: calc(100vh - 117px - 96px);
+		min-height: 500px;
+		overflow: hidden;
+	}
+
+	.section-form {
+		position: relative;
+		padding-top: 15%;
+	}
+
+	.section-form__heading {
+		@extend %fontPrimaryBold;
+        font-size: 38px;
+        color: $colorGreen1;
+        letter-spacing: -1.43px;
+        margin-bottom: 25px;
+	}
+
+	.section-form__inner {
+		// background-color: $colorPureWhite;
+		// padding-top: 40px;
+		// padding-bottom: 50px;
+		// padding-left: 60px;
+		// padding-right: 60px;
+  //      	border-radius: 4px;
+
+
+  		input {
+  			max-width: 430px;
+  		}
+
+	}
+
+	.section-form__phone-verify {
+		transition: all 0.6s;
+		position: absolute;
+		top: 0;
+
+		.submit {
+			margin-top: 10px;
+		}
+
+		&.hidden-left {
+			left: -150%;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+	}
+
+
+	.section-form__code {
+		position: absolute;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+		right: -100%;
+		transition: all 0.6s;
+
+		&.visible {
+			visibility: visible;
+			left: 0;
+			opacity: 1;
+		}
+
+		input {
+			margin-bottom: 15px;
+		}
+	}
+
+	@media screen and (max-width: $smallTablet) {
+		
+		.section-form__phone-verify {
+			margin: 20px;
+		}
+
+		.submit {
+			width: 100%;
+		}
+
+		.section-form__user-input {
+			width: 250px;
+		}
+
+		.btn-primary {
+			font-size: 18px;
+		}
+
+		.section-form__heading {
+    		font-size: 37px;
+    	}
+
+    	.section-form__code {
+    		margin: 20px;
+    		width: 89%;
+    	}
+
+    	.input-wrap input[type="tel"] {
+    		max-width: none;
+    	}
+	}
+
+}

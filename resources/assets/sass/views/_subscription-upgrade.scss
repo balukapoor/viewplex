@@ -1,0 +1,71 @@
+.page--subscription-upgrade {
+
+	.section-heading {
+		padding-top: 35px;
+		padding-bottom: 40px;
+	}
+
+	.section-heading__heading {
+		@extend %fontPrimaryBold;
+		font-size: 28px;
+		color: $colorGrey2;
+		text-align: center;
+	}
+
+	.section-plans__plan-inner {
+		text-align: center;
+		background-color: #fff;
+	    padding-top: 20px;
+	    padding-bottom: 40px;
+	    padding-left: 25px;
+    	padding-right: 25px;
+	    border-radius: 5px;
+	    margin-bottom: 20px;
+	}
+
+	.section-plans__plan-header {
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-direction: column;
+	    border-bottom: 0.1px solid #7BCEB6;
+	}
+
+	.section-plans__plan-name {
+		margin: 0;
+	    line-height: 2;
+	    font-weight: 700;
+    }
+
+	.section-plans__plan-price {
+		font-size: 22px;
+    	color: $colorGreen1;
+	}
+
+	.section-plans__plan-count {
+		margin-bottom: 40px;
+	}
+
+	.section-plans__plan-features {
+		padding-left: 0;
+		margin-top: 35px;
+
+		li {
+		list-style-type: none;
+		margin-bottom: 20px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: left;
+	    text-align: left;
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	i.green {
+		color: $colorGreen1;
+	}
+
+}

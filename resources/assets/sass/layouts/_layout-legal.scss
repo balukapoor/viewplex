@@ -1,0 +1,159 @@
+.layout--legal {
+
+	.app-header__buttons li:first-child a{
+		color: $colorGreen1;
+	}
+
+	.btn-primary.outline.white {
+    	border: 2px solid $colorGreen1;
+    	color: $colorGreen1;
+	}
+
+	.section-content {
+		margin-top: 60px;
+	    margin-bottom: 100px;
+
+
+		h1, h2, h3, h4, h5, h6 {
+
+			@extend %fontPrimaryBold;
+
+
+		}
+	
+	
+		h1 {
+			font-size: 40px;
+    		color: #333;
+		    font-weight: 500;
+		    font-family: sans-serif;
+		    padding-bottom: 12px;
+		    font-weight: bolder;
+		    margin: 0;
+		    text-align: center;
+    		width: 100%;
+		}
+
+		h2, h3 {
+			color: #79cdb6;
+		    font-size: 20px;
+		    font-family: sans-serif;
+		    margin: 0;
+		    padding-bottom: 11px;
+		    padding-top: 10px;
+		    position: relative;
+		    
+		}
+
+		h4, h5 {
+			font-size: 20px;
+		}
+
+
+		h6 {
+			font-size: 17px;
+		}
+
+		hr {
+			color: $cornFlowerBlue;
+		    width: 90%;
+		    background-color: $cornFlowerBlue;
+		    border-color: $cornFlowerBlue;
+		    height: 1px;
+		    border: 0;
+		    margin-top: 20px;
+		}
+
+		p {
+			
+			
+			margin: 0;
+			text-align: left;
+			line-height: 22px;
+			font-size: 14px;
+			letter-spacing: 0.2px;
+		}
+
+		.section-content__container {
+		    background-color: #fff;
+		    display: flex;
+		    flex-flow: wrap;
+		    width: 50%;
+		    margin: 0 auto;
+		    border-radius: 6px;
+		    padding-bottom: 60px;
+		    padding-top: 60px;
+		    width: 100%;
+		    padding-left: 50px;
+		    padding-right: 50px;
+		    
+		    
+		    width: 100%;
+		}
+
+		ul {
+		    padding-left: 60px;
+		    margin-top: 0;
+		    
+		    list-style-type: none;
+		    position: relative;
+		}
+
+		li {
+		    padding-right: 42px;
+		    margin: 0;
+		    text-align: left;
+		    line-height: 22px;
+		    font-size: 14px;
+		    letter-spacing: 0.2px;
+		    position: relative;
+
+			 &:before {
+			    content: ' ';
+			    background-image: url(/../images/circle-thin-FontAwesome.png);
+			    width: 11px;
+			    height: 11px;
+			    background-size: cover;
+			    background-repeat: no-repeat;
+			    position: absolute;
+			    top: 6px;
+			    left: -22px;
+			}
+		}
+
+		hr {
+			color: #f0f0f0;
+		    width: 90%;
+		    background-color: #f0f0f0;
+		    border-color: #f0f0f0;
+		    height: 1px;
+		    border: 0;
+		    margin-top: 20px;
+		}
+
+		.section-content__date {
+			text-align: center;
+		    padding-bottom: 30px;
+		    margin-left: auto;
+		    margin-right: auto;
+		    color: #CDD9E9;
+		}
+
+	}
+
+	@media screen and (max-width: $smallPhablet) {
+
+		.section-content .section-content__container {
+			padding-bottom: 40px;
+		    padding-top: 40px;
+		    padding-left: 20px;
+		    padding-right: 20px; 
+		}
+
+		.section-content h1 {
+			font-size: 25px;
+		}
+
+	}
+
+}

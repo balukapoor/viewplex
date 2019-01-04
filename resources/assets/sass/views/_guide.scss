@@ -1,0 +1,214 @@
+.page--guide {
+
+	.app-header__buttons li:first-child a{
+		color: $colorGreen1;
+	}
+
+	.btn-primary.outline.white {
+    	border: 2px solid $colorGreen1;
+    	color: $colorGreen1;
+	}
+
+    .app-main__bg-image {
+    	 background-image: url(/../images/guide.jpg);
+    }
+
+ 
+	.section-guide{
+    	position: relative;
+	}
+
+	.section-guide__step {
+		display: flex;
+	}
+
+	.section-guide__title-h1 {
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-size: 30px;
+	    font-family: sans-serif;
+	    padding-top: 50px;
+	    padding-bottom: 14px;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    margin-right: 0;
+	    margin-left: 10%;
+	    font-weight: bolder;
+	}
+
+	.section-guide__image-title-h2 {
+	    color: #79cdb6;
+	    font-size: 16px;
+	    font-family: sans-serif;
+	    margin: 0;
+	    padding-bottom: 10px;
+	    padding-top: 25px;
+	    position: relative;
+	    padding-left: 26px;
+	}
+
+	.section-guide__step-heading  .image-title__number {
+        background-color: #79cdb6;
+	    opacity: 0.8;
+	    padding-top: 6px;
+	    padding-bottom: 6px;
+	    padding-left: 12px;
+	    padding-right: 12px;
+	    color: #fff;
+	    border-radius: 50%;
+	    text-align: center;
+	    position: absolute;
+	    left: -27px;
+	    top: 19px;
+	}
+
+	.section-guide__image-title-p {
+	    margin: 0;
+	    color: darkgray;
+	    font-weight: 200;
+	    font-size: 16px;
+	    font-family: sans-serif;
+	    line-height: 1.4;
+	}
+
+	.section-guide__container {
+	    background-color: #fff;
+	    display: flex;
+	    flex-flow: wrap;
+	    width: 80%;
+	    margin: 0 auto;
+	    border-radius: 6px;
+	    padding-bottom: 50px;
+	    padding-left: 60px;
+    	padding-right: 30px;
+	    margin-bottom: 100px;
+	}
+
+	.section-guide__step-left {
+        padding-top: 50px;
+	    padding-bottom: 20px;
+	    width: 200%;
+	}
+
+	.section-guide__step-right {
+	    align-items: center;
+	    display: flex;
+	    padding: 40px;
+	}
+
+	.section-faqs__item-divider {
+	    color: #f0f0f0;
+	    width: 90%;
+	    background-color: #f0f0f0;
+	    border-color: #f0f0f0;
+	    height: 1px;
+	    border: 0;
+	    margin-top: 70px;
+	    margin-bottom: 0;
+	}
+
+
+	.section-guide__step-image {
+		background-size: cover; 
+		width: 230px;
+		height: 230px; 
+		border-radius: 50%;
+	}
+
+	
+	@media screen and (max-width: $mediumTablet) {
+
+		.section-guide__step-right {
+			padding: 20px 0px 0px 20px;
+		}
+	}
+
+
+	@media screen and (max-width: $largePhablet) {
+		.section-guide__step-heading .image-title__number  {
+			left: 110px;
+		}
+	}
+
+	@media screen and (max-width: $smallPhablet) {
+		.section-guide__step-heading .image-title__number  {
+			left: 78px;
+		}
+	}
+
+	@media screen and (max-width: $smallTablet) {
+		.section-guide__container {
+			margin: 0;
+		    width: 100%;
+		    padding-left: 30px;
+		    padding-right: 30px;
+		    margin-bottom: 30px;
+		}
+
+		.section-guide__step-image{
+			height: 200px;
+    		border-radius: 0%;
+    		margin: 0 auto;
+		}
+
+		.section-guide__step {
+			flex-wrap: wrap;
+		}
+
+		.section-guide__step-left {
+		    margin: 0 auto;
+		    padding-top: 30px;
+		}
+
+		.section-guide__step-right {
+			padding: 0;
+		}
+
+		.page--guide .section-guide__step-right {
+			padding-left: 13px;
+		}
+
+		.section-guide__title-h1{
+			margin-left: 0;
+		}
+
+		.section-guide__image-title-h2 {
+			text-align: center;
+		}
+
+		.section-guide__step-heading .image-title__number  {
+			left: 78px;
+		}
+
+		.section-faqs__item-divider {
+			margin-top: 30px;
+		}
+	}
+
+
+	@media screen and (max-width: $largePhone) {
+		.section-guide__step-heading .image-title__number  {
+			left: 42px;
+		}
+	}
+
+	@media screen and (max-width: $mediumPhone) {
+		.section-guide__step-heading .image-title__number  {
+			left: 28px;
+		}
+	}
+
+	@media screen and (max-width: $smallPhone) {
+		.section-guide__step-heading .image-title__number  {
+			left: -2px;
+		}	
+
+		.section-guide__step-right {
+			padding: 0;
+		}
+	}
+}
+
+
+
+	

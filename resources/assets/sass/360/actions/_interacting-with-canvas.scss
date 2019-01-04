@@ -1,0 +1,20 @@
+body.interacting-with-canvas {
+
+	canvas {
+		cursor: -webkit-grabbing;
+	}
+
+	.uploads-sidebar {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(-90%);
+	}
+
+	.uploads-toolbar {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(100%);
+	}
+
+
+}

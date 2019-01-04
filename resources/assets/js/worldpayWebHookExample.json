@@ -1,0 +1,14 @@
+/* Webhook exmaple fore Worldpay*/
+
+
+{
+        "merchantId" : "c673e5e13-df89-34e5-a6f3-7584903d4f34",
+        "notificationEventType" : "ORDER_STATE_CHANGE", 
+        "adminCode" : "MERCHANT_ADMIN_CODE",
+        "merchantCode" : "MERCHANT_CODE", 
+        "orderCode" : "worldpay-order-code", 
+        "paymentStatus" : "SUCCESS", 
+        "environment" : "LIVE"
+}
+
+//You need to return an HTTP 200 response

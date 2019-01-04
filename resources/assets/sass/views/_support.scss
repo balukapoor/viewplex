@@ -1,0 +1,119 @@
+.page--support {
+
+	.app-header__buttons li:first-child a{
+		color: $colorGreen1;
+	}
+
+	.btn-primary.outline.white {
+    	border: 2px solid $colorGreen1;
+    	color: $colorGreen1;
+	}
+
+	.section-support__container {
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    margin-bottom: 5%;
+	    margin-top: 10%;
+	    background-color: #FFFFFF;
+	    padding-top: 50px;
+	    padding-bottom: 60px;
+	    box-shadow: 8px 11px 11px -5px rgba(0, 0, 0, 0.12);
+	    color: #888888;
+	    padding-left: 80px;
+	    padding-right: 80px;
+	    
+	    h1 {
+			@extend %fontPrimaryBold;
+			margin-top: 0px;
+		}
+
+		p {
+			@extend %fontPrimaryRegular;
+		}
+	}
+
+	
+
+	.section-support__icon {
+		display: flex;
+    	flex-direction: row-reverse;
+    	margin-right: 40px;
+
+		i {
+			font-size: 120px;
+		}
+	}
+
+	.section-support__element{
+		border-radius: 3px;
+	}
+
+	
+
+	.col-sm-4:nth-child(1) {
+    	.section-support__element {
+    		background-color: #CE7ABC;
+    	}
+    }
+
+    .col-sm-4:nth-child(2) {
+    	.section-support__element {
+    		background-color: $colorGreen1;
+    	}
+    }
+
+    .col-sm-4:nth-child(3) {
+    	.section-support__element {
+    		background-color: #CE7A93;
+    	}
+    }
+
+    
+    .section-support__element {
+	    height: 250px;
+	    flex-basis: 33%;
+	    padding: 20px;
+	    text-decoration: none;
+	    color: white;
+	    text-align: center;
+	    transition: all .6s;
+	    i {
+	    	font-size: 90px;
+	    }
+
+	    h2 {
+
+	    	font-family: $fontPrimary;
+	    }
+	}
+
+     a {
+   	text-decoration: none;
+	}
+
+	.section-support__element:hover {
+	    box-shadow: 8px 11px 11px -5px rgba(0,0,0,0.12);
+        transform: scale(1.03);
+	}
+
+	@media screen and (max-width: $largeTablet) {
+		.section-support__container {
+		    flex-direction: column;
+		    padding-left: 40px;
+   			padding-right: 40px;
+   			padding-top: 30px;
+    		padding-bottom: 30px;
+        }
+        .section-support__icon {
+	   		margin-bottom: 25px;
+    	}
+
+    	.col-sm-4:not(:last-child) {
+	    		margin-bottom: 20px;
+	    	
+        }
+
+    }
+	
+}

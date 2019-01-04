@@ -1,0 +1,59 @@
+/**
+ * Custom Colors
+ */
+
+$colorPureWhite: #FFFFFF;
+$colorOffWhite1: #FAFAFA;
+$colorOffWhite2: #F5F5F5;
+$cornFlowerBlue: #A0AEC1;
+$silver: #B9B9B9;
+$gooseEggBlue: #CDD9E9;
+$colorGreen1: #7BCEB6;
+$colorGrey1: #888888;
+$colorGrey2: #7C7C7C;
+
+// Semantic
+$colorInfo: #8eb4cb;
+$colorSuccess: #2ab27b;
+$colorWarning: #cbb956;
+$colorDanger: #bf5329;
+
+/**
+ * Custom Fonts
+ */
+
+$fontPrimary: 'Maven Pro', 'Sans Serif';
+
+%fontPrimaryRegular {
+	font-family: $fontPrimary;
+	font-weight: 400;
+}
+
+%fontPrimaryMedium {
+	font-family: $fontPrimary;
+	font-weight: 500;
+}
+
+%fontPrimaryBold {
+	font-family: $fontPrimary;
+	font-weight: 600;
+}
+
+%fontPrimaryBlack {
+	font-family: $fontPrimary;
+	font-weight: 800;
+}
+
+
+
+// Screen Breakpoints
+$largeLaprrtop: 1380px;
+$smallLaptop: 1200px;
+$largeTablet: 992px;
+$mediumTablet: 768px;
+$smallTablet: 610px;
+$largePhablet: 550px;
+$smallPhablet: 480px;
+$largePhone: 420px;
+$mediumPhone: 380px;
+$smallPhone: 322px;
